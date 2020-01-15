@@ -29,7 +29,10 @@ function App() {
   return (
     <Router>
       <div className={toggle ? "App App--light" : "App App--dark"}>
-        <Header />
+        <Header
+          toggle={toggle}
+          onClick={() => setToggle(!toggle)}
+        />
         <Switch>
           <Route exact path="/" component={Main} />
           <Route path="/country/:alpha3code" component={Country} />

@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default function Country({ match }) {
-
   // states from country info and api call 
   const [api, setApi] = useState(`https://restcountries.eu/rest/v2/alpha/${match.params.alpha3code}`);
   const [country, setCountry] = useState({});
@@ -13,7 +12,7 @@ export default function Country({ match }) {
   useEffect(() => {
     const fetchCountry = async () => {
       const response = await axios(api);
-      const { data } = response
+      const { data } = response;
       setCountry(data);
     }
     fetchCountry();
