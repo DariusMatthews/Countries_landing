@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Main from './components/Main';
+import Country from './components/Country';
 
-/* 
+/*
   steps to build logic:
     1. Setup states to hold:
       i. user text input search
@@ -23,8 +27,15 @@ function App() {
 
 
   return (
-    <div className="App">
-    </div>
+    <Router>
+      <div className={toggle ? "App App--light" : "App App--dark"}>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route path="/country/:alpha3code" component={Country} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
