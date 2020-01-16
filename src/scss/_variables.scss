@@ -1,0 +1,27 @@
+// Colors
+
+// Dark Mode elements & bg
+$DarkModeBlue: hsl(209, 23%, 22%);
+$DarkModeDarkBlue: hsl(207, 26%, 17%);
+
+// Light Mode text, input, & bg
+$LightModeDarkBlue: hsl(200, 15%, 8%);
+$LightModeDarkGray: hsl(0, 0%, 52%);
+$LightModeGray: hsl(0, 0%, 98%);
+
+// Dark Mode text & Light Mode elements
+$White: hsl(0, 0%, 100%);
+
+// TYPOGRAPHY
+
+//font family
+$Font: 'Nunito Sans', sans-serif;
+
+//font weight
+$LightWeight: 300;
+$NormalWeight: 600;
+$BoldWeight: 800;
+
+//font size
+$MainFontSize: 14px;
+$CountryFontSize: 16px;

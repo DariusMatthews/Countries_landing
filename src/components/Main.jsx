@@ -8,9 +8,10 @@ export default function Main() {
   const [userSearch, setUserSearch] = useState('');
   const [userSelect, setUserSelect] = useState('');
   const [countries, setCountries] = useState([]);
+  const [clicked, setClick] = useState(false);
 
   //array to hold regions to choose from
-  const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"]
+  const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
   //inital render effect
   useEffect(() => {
@@ -64,7 +65,8 @@ export default function Main() {
 
       {/* User Region Filter Options */}
       <ul>
-        {regions.map(region =>
+        <li><button onClick={() => setClick(!clicked)}>Filter by Region</button></li>
+        {clicked && regions.map(region =>
           <li>
             <button onClick={() => setUserSelect(region)}>
               {region}
