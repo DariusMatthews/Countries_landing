@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Search from '../images/search-glass.svg';
+import DownBtn from '../images/down-btn.svg';
 
-export default function Main() {
+export default function Main({toggle}) {
   //states to hold all user interactions and countries
   const [userText, setUserText] = useState('');
   const [userSearch, setUserSearch] = useState('');
@@ -56,19 +58,46 @@ export default function Main() {
   }
 
   return (
-    <div>
+    <div className="main">
       {/* User Search From */}
-      <form onSubmit={submitHandler} className="form">
-        <input onChange={changeHandler} type="text" className="form__input" />
-        <button type="submit" className="form__button">Submit</button>
+      <form 
+        onSubmit={submitHandler} 
+        className={toggle ? "form form--light" : "form form--dark"}>
+        <input 
+          placeholder="Search for a country..." 
+          onChange={changeHandler} 
+          type="text" 
+          className={toggle ? "form__input form__input--light" : "form__input form__input--dark"}
+        />
+        <button 
+          type="submit"
+          className={toggle ? "form__btn btn btn--light" : "form__btn btn btn--dark"}>
+          <img
+            className={toggle ? "form__img form__img--light" : "form__img form__img--dark"}
+            src={Search}
+            alt="search"
+          />
+        </button>
       </form>
 
       {/* User Region Filter Options */}
-      <ul>
-        <li><button onClick={() => setClick(!clicked)}>Filter by Region</button></li>
+      <ul
+        className={toggle ? "list list--light" : "list list--dark"}>
+        <li
+          className={toggle ? "list__item list__item--title list__item--title-light list__item--light" : "list__item list__item--title list__item--title-dark list__item--dark"}>
+          <button
+            className={toggle ? "list__btn btn btn--light" : "list__btn btn btn--dark"}
+            onClick={() => setClick(!clicked)}>
+            Filter by Region
+            <img className={toggle ? "list__img list__img--light" : "list__img list__img--dark"} src={DownBtn} alt="Down"/>
+          </button>
+        </li>
         {clicked && regions.map(region =>
-          <li>
-            <button onClick={() => setUserSelect(region)}>
+          <li
+            className={toggle ? "list__item list__item--light" : "list__item list__item--dark"}>
+            <button
+              className={toggle ? "btn btn--light" : "btn btn--dark"}
+              onClick={() => setUserSelect(region)}>
               {region}
             </button>
           </li>)

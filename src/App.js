@@ -34,7 +34,7 @@ function App() {
           onClick={() => setToggle(!toggle)}
         />
         <Switch>
-          <Route exact path="/" component={Main} />
+          <Route exact path="/" render={(props) => <Main {...props} toggle={toggle} />} />
           <Route path="/country/:alpha3code" component={Country} />
         </Switch>
       </div>
