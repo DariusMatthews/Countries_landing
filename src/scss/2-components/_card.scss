@@ -1,0 +1,62 @@
+.card {
+  width: 300px;
+  min-height: 350px;
+  border-radius: 6px;
+
+  &--light {
+    background-color: $White;
+    box-shadow: 0 .15rem .65rem .07rem rgba(73, 73, 73, 0.08);
+  }
+
+  &--dark {
+    background-color: $DarkModeBlue;
+    box-shadow: 0 .15rem .65rem .07rem rgba(34, 35, 36, 0.452);
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    
+    &--light {
+      color: $LightModeDarkBlue;
+    }
+
+    &--dark {
+      color: $White;
+    }
+  }
+
+  &__title {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__listItem {
+    padding-bottom: .25rem;
+
+    &--light {
+      color: $LightModeDarkBlue;
+    }
+
+    &--dark {
+      color: $White;
+    }
+  }
+
+  &__description {
+    margin-right: 2.5px;
+  }
+}

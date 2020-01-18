@@ -1,11 +1,14 @@
 //BASE
-@import './reset';
-@import './base';
-
-//COMPONENTS
-@import './btn';
+@import './0-base/reset';
+@import './0-base/base';
 
 //LAYOUT
-@import './header';
-@import './main';
-@import './country';
+@import './1-layout/header';
+@import './1-layout/main';
+@import './1-layout/country';
+
+//COMPONENTS
+@import './2-components/btn';
+@import './2-components/form';
+@import './2-components/list';
+@import './2-components/card';

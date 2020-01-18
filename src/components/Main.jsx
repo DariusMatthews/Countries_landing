@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import Cards from './Cards';
 import Search from '../images/search-glass.svg';
 import DownBtn from '../images/down-btn.svg';
 
-export default function Main({toggle}) {
+export default function Main({ toggle }) {
   //states to hold all user interactions and countries
   const [userText, setUserText] = useState('');
   const [userSearch, setUserSearch] = useState('');
@@ -60,16 +60,16 @@ export default function Main({toggle}) {
   return (
     <div className="main">
       {/* User Search From */}
-      <form 
-        onSubmit={submitHandler} 
+      <form
+        onSubmit={submitHandler}
         className={toggle ? "form form--light" : "form form--dark"}>
-        <input 
-          placeholder="Search for a country..." 
-          onChange={changeHandler} 
-          type="text" 
+        <input
+          placeholder="Search for a country..."
+          onChange={changeHandler}
+          type="text"
           className={toggle ? "form__input form__input--light" : "form__input form__input--dark"}
         />
-        <button 
+        <button
           type="submit"
           className={toggle ? "form__btn btn btn--light" : "form__btn btn btn--dark"}>
           <img
@@ -89,7 +89,7 @@ export default function Main({toggle}) {
             className={toggle ? "list__btn btn btn--light" : "list__btn btn btn--dark"}
             onClick={() => setClick(!clicked)}>
             Filter by Region
-            <img className={toggle ? "list__img list__img--light" : "list__img list__img--dark"} src={DownBtn} alt="Down"/>
+            <img className={toggle ? "list__img list__img--light" : "list__img list__img--dark"} src={DownBtn} alt="Down" />
           </button>
         </li>
         {clicked && regions.map(region =>
@@ -104,13 +104,11 @@ export default function Main({toggle}) {
         }
       </ul>
 
-      {countries.map(country => (
-        <h1 key={country.alpha3Code}>
-          <Link to={`/country/${country.alpha3Code}`}>
-            {country.name}
-          </Link>
-        </h1>
-      ))}
+      {/* Country Cards  */}
+      <Cards
+        countries={countries}
+        toggle={toggle}
+      />
     </div>
   )
 }
