@@ -1,0 +1,136 @@
+.country {
+  display: grid;
+
+  &__backLink {
+    text-decoration: none;
+  }
+
+  &__backBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    margin-bottom: 3rem;
+    border-radius: 3px;
+
+    &--light {
+      background-color: $White;
+      box-shadow: 0 .05rem .5rem .07rem rgba(73, 73, 73, 0.336);
+    }
+
+    &--dark {
+      background-color: $DarkModeBlue;
+      box-shadow: 0 .05rem .75rem .1rem rgba(34, 35, 36, 0.856);
+    }
+  }
+
+  &__arrow {
+    width: 13.5%;
+
+    &--light {
+      filter: invert(3%) sepia(58%) saturate(359%) hue-rotate(158deg) brightness(91%) contrast(90%);
+    }
+
+    &--dark {
+      filter: invert(100%) sepia(1%) saturate(887%) hue-rotate(213deg) brightness(114%) contrast(93%);
+    }
+  }
+
+  &__btnText {
+    margin-left: 10px;
+
+    &--light {
+      color: $LightModeDarkBlue
+    }
+
+    &--dark {
+      color: $White;
+    }
+  }
+
+  &__flag {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+
+    &--light {
+      color: $LightModeDarkBlue;
+    }
+
+    &--dark {
+      color: $White;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 2.75rem;
+    padding-left: 0;
+  }
+
+  &__listItem {
+    margin-bottom: .7rem;
+    font-weight: $LightWeight;
+
+    &--light {
+      color: $LightModeDarkBlue;
+    }
+
+    &--dark {
+      color: $White;
+    }
+  }
+
+  &__subTitle {
+    font-weight: $NormalWeight;
+    margin-right: 5px;
+  }
+
+  &__borderTitle {
+    margin-bottom: 1rem;
+    font-weight: $NormalWeight;
+
+    &--light {
+      color: $LightModeDarkBlue;
+    }
+
+    &--dark {
+      color: $White;
+    }
+  }
+
+  &__borders {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    max-width: 500px;
+  }
+
+  &__borderBtn {
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin: .3rem;
+    font-weight: $LightWeight;
+    
+    
+    &--light {
+      background-color: $White;
+      box-shadow: 0 .05rem .25rem .07rem rgba(73, 73, 73, 0.164);
+      color: $LightModeDarkBlue;
+    }
+    
+    &--dark {
+      background-color: $DarkModeBlue;
+      box-shadow: 0 .05rem .25rem .1rem rgba(34, 35, 36, 0.377);
+      color: $White;
+    }
+  }
+}

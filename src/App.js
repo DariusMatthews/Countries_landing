@@ -35,7 +35,7 @@ function App() {
         />
         <Switch>
           <Route exact path="/" render={(props) => <Main {...props} toggle={toggle} />} />
-          <Route path="/country/:alpha3code" component={Country} />
+          <Route path="/country/:alpha3code" render={(props) => <Country {...props} toggle={toggle} />} />
         </Switch>
       </div>
     </Router>
