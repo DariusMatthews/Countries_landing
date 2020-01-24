@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cards from './Cards';
+import Pagination from './Pagination';
 import Search from '../images/search-glass.svg';
 import DownBtn from '../images/down-btn.svg';
 
 export default function Main({ toggle }) {
-  //states to hold all user interactions and countries
+  //states to hold all user interactions, countries, and pagination
   const [userText, setUserText] = useState('');
   const [userSearch, setUserSearch] = useState('');
   const [userSelect, setUserSelect] = useState('');
   const [countries, setCountries] = useState([]);
   const [clicked, setClick] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage] = useState(40);
 
   //array to hold regions to choose from
   const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
@@ -56,6 +59,14 @@ export default function Main({ toggle }) {
     e.preventDefault();
     setUserSearch(userText);
   }
+
+  //get current cards per page
+  const indexOfLastCountry = currentPage * postPerPage;
+  const indexOfFirstCountry = indexOfLastCountry - postPerPage;
+  const currentCountries = countries.slice(indexOfFirstCountry, indexOfLastCountry);
+
+  //Change Page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
     <div className="main">
@@ -106,7 +117,14 @@ export default function Main({ toggle }) {
 
       {/* Country Cards  */}
       <Cards
-        countries={countries}
+        countries={currentCountries}
+        toggle={toggle}
+      />
+
+      <Pagination
+        countriesPerPage={postPerPage} 
+        totalCountries={countries.length} 
+        paginate={paginate}
         toggle={toggle}
       />
     </div>
