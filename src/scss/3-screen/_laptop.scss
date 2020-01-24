@@ -1,0 +1,97 @@
+@media only screen and (min-width: 1024px) {
+  .App {
+    padding: 0 3.5rem;
+  }
+
+  .header {
+    margin-left: -3.5rem;
+    margin-right: -3.5rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+
+    &__title {
+      font-size: 1.75rem;
+    }
+  }
+
+  .btn {
+    font-size: 1.05rem;
+
+    &__img {
+      width: .85rem;
+    }
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "form list"
+    "cards cards"
+    ;
+
+    &__cardSection {
+      grid-area: cards;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .form {
+    grid-area: form;
+  }
+
+  .list {
+    grid-area: list;
+    margin-left: auto;
+    margin-bottom: 3.2rem;
+  }
+
+  .card {
+    width: 275px;
+  }
+
+  .country {
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+    "back back back back"
+    "img img title title"
+    "img img left right"
+    "img img border borders";
+
+    &__backLink {
+      grid-area: back;
+    }
+
+    &__flag {
+      grid-area: img;
+      width: 85%;
+      height: 60%;
+    }
+
+    &__title {
+      grid-area: title;
+    }
+
+    &__list {
+      &--left {
+        grid-area: left;
+      }
+
+      &--right {
+        grid-area: right;
+      }
+    }
+
+    &__borderTitle {
+      grid-area: border;
+      padding-top: 5px;
+      font-size: $CountryFontSize;
+    }
+
+    &__borders {
+      grid-area: borders;
+      margin-left: -6rem;
+      width: 150%;
+    }
+  }
+}

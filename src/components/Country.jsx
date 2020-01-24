@@ -45,7 +45,7 @@ export default function Country({ match, toggle }) {
         {country.name}
       </h1>
 
-      <ul className="country__list country__list--top">
+      <ul className="country__list country__list--left">
         <li className={toggle ? "country__listItem country__listItem--light" : "country__listItem country__listItem--dark"}>
           <span className="country__subTitle">
             Native Name:
@@ -78,7 +78,7 @@ export default function Country({ match, toggle }) {
         </li>
       </ul>
 
-      <ul className="country__list">
+      <ul className="country__list country__list--right">
         <li className={toggle ? "country__listItem country__listItem--light" : "country__listItem country__listItem--dark"}>
           <span className="country__subTitle">
             Top Level Domain:

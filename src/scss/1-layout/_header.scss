@@ -9,14 +9,24 @@
 
   &--light {
     background-color: $White;
-    color: $LightModeDarkBlue;
     box-shadow: 0 .03rem .3rem hsla(0, 0%, 52%, 0.3);
   }
 
   &--dark {
     background-color: $DarkModeBlue;
-    color: $White;
     box-shadow: 0 .03rem .3rem hsla(200, 15%, 8%, 0.3);
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &--light {
+      color: $LightModeDarkBlue;
+    }
+
+    &--dark {
+      color: $White;
+    }
   }
 
   &__title {

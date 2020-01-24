@@ -1,0 +1,30 @@
+@media only screen and (min-width: 768px) {
+  .App {
+    padding: 0 2.25rem;
+  }
+
+  .header {
+    margin-left: -2.25rem;
+    margin-right: -2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .btn {
+    font-size: 1.05rem;
+
+    &__img {
+      width: .85rem;
+    }
+  }
+
+  .main {
+    &__cardSection {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
