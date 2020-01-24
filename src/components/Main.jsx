@@ -13,7 +13,9 @@ export default function Main({ toggle }) {
   const [countries, setCountries] = useState([]);
   const [clicked, setClick] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage] = useState(40);
+
+  //how many countries will be on each page
+  const countriesPerPage = 24;
 
   //array to hold regions to choose from
   const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
@@ -61,12 +63,16 @@ export default function Main({ toggle }) {
   }
 
   //get current cards per page
-  const indexOfLastCountry = currentPage * postPerPage;
-  const indexOfFirstCountry = indexOfLastCountry - postPerPage;
+  const indexOfLastCountry = currentPage * countriesPerPage;
+  const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
   const currentCountries = countries.slice(indexOfFirstCountry, indexOfLastCountry);
 
-  //Change Page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
+  //Change Page and start at top of page on click
+  const paginate = pageNumber => {
+    setCurrentPage(pageNumber);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
 
   return (
     <div className="main">
@@ -122,7 +128,7 @@ export default function Main({ toggle }) {
       />
 
       <Pagination
-        countriesPerPage={postPerPage} 
+        countriesPerPage={countriesPerPage} 
         totalCountries={countries.length} 
         paginate={paginate}
         toggle={toggle}
