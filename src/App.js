@@ -34,8 +34,8 @@ function App() {
           onClick={() => setToggle(!toggle)}
         />
         <Switch>
-          <Route exact path="/" render={(props) => <Main {...props} toggle={toggle} />} />
-          <Route path="/country/:alpha3code" render={(props) => <Country {...props} toggle={toggle} />} />
+          <Route exact path={`${process.env.PUBLIC_URL}/`} render={(props) => <Main {...props} toggle={toggle} />} />
+          <Route path={`${process.env.PUBLIC_URL}/country/:alpha3code`} render={(props) => <Country {...props} toggle={toggle} />} />
         </Switch>
       </div>
     </Router>

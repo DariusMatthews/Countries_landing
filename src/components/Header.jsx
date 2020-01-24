@@ -8,7 +8,7 @@ export default function Header({ toggle, onClick }) {
     <div className={toggle ? "header header--light" : "header header--dark"}>
       <Link
       className={toggle ? "header__link header__link--light" : "header__link header__link--dark"}
-      to="/">
+      to={`${process.env.PUBLIC_URL}/`}>
         <h1 className="header__title">Where in The World?</h1>
       </Link>
       <button className={toggle ? "btn btn--light" : "btn btn--dark"} onClick={onClick}>

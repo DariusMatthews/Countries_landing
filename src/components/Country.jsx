@@ -30,7 +30,7 @@ export default function Country({ match, toggle }) {
 
   return (
     <div className="country">
-      <Link className="country__backLink" to="/">
+      <Link className="country__backLink" to={`${process.env.PUBLIC_URL}/`}>
         <div className={toggle ? "country__backBtn country__backBtn--light" : "country__backBtn country__backBtn--dark"}>
           <img src={arrow} alt="back arrow" className={toggle ? "country__arrow country__arrow--light" : "country__arrow country__arrow--dark"} />
           <span className={toggle ? "country__btnText country__btnText--light" : "country__btnText country__btnText--dark"}>
@@ -118,7 +118,7 @@ export default function Country({ match, toggle }) {
         {neighbors !== undefined && neighbors.map(neighbor => (
           <Link
             key={neighbor}
-            to={`/country/${neighbor}`}>
+            to={`${process.env.PUBLIC_URL}/country/${neighbor}`}>
             <button
               onClick={() => setApi(`https://restcountries.eu/rest/v2/alpha/${neighbor}`)}
               className={toggle ? "country__borderBtn country__borderBtn--light" : "country__borderBtn country__borderBtn--dark"}

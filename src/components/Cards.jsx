@@ -8,7 +8,7 @@ export default function Cards({countries, toggle}) {
       <div 
         key={country.alpha3Code}
         className={toggle ? "card card--light" : "card card--dark"}>
-          <Link to={`/country/${country.alpha3Code}`}>
+          <Link to={`${process.env.PUBLIC_URL}/country/${country.alpha3Code}`}>
             <img
               className="card__img"
               src={country.flag}
@@ -17,7 +17,7 @@ export default function Cards({countries, toggle}) {
           </Link>
           <Link
           className={toggle ? "card__link card__link--light" : "card__link card__link--dark"}
-          to={`/country/${country.alpha3Code}`}>
+          to={`${process.env.PUBLIC_URL}/country/${country.alpha3Code}`}>
             <h2 className="card__title">{country.name}</h2>
           </Link>
           <ul className="card__list">

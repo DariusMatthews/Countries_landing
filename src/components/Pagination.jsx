@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Pagination({ countriesPerPage, totalCountries, paginate, toggle }) {
+  //empty array for the amount of page numbers
   const pageNumbers = [];
 
   //gives us correct amount of page numbers

@@ -127,6 +127,7 @@ export default function Main({ toggle }) {
         toggle={toggle}
       />
 
+      {/* Pagination list */}
       <Pagination
         countriesPerPage={countriesPerPage} 
         totalCountries={countries.length} 
