@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Countries_landing/static/css/main.c3f232ca.chunk.css",
-    "main.js": "/Countries_landing/static/js/main.c0b264d3.chunk.js",
-    "main.js.map": "/Countries_landing/static/js/main.c0b264d3.chunk.js.map",
+    "main.css": "/Countries_landing/static/css/main.aef181d4.chunk.css",
+    "main.js": "/Countries_landing/static/js/main.c999e78d.chunk.js",
+    "main.js.map": "/Countries_landing/static/js/main.c999e78d.chunk.js.map",
     "runtime-main.js": "/Countries_landing/static/js/runtime-main.64b23685.js",
     "runtime-main.js.map": "/Countries_landing/static/js/runtime-main.64b23685.js.map",
-    "static/js/2.33bb0505.chunk.js": "/Countries_landing/static/js/2.33bb0505.chunk.js",
-    "static/js/2.33bb0505.chunk.js.map": "/Countries_landing/static/js/2.33bb0505.chunk.js.map",
+    "static/js/2.7fe9e345.chunk.js": "/Countries_landing/static/js/2.7fe9e345.chunk.js",
+    "static/js/2.7fe9e345.chunk.js.map": "/Countries_landing/static/js/2.7fe9e345.chunk.js.map",
     "index.html": "/Countries_landing/index.html",
-    "precache-manifest.ac14e55e3518b314aa07ad25e204ac79.js": "/Countries_landing/precache-manifest.ac14e55e3518b314aa07ad25e204ac79.js",
+    "precache-manifest.5550a5bd74729a3ce028121245fb6e66.js": "/Countries_landing/precache-manifest.5550a5bd74729a3ce028121245fb6e66.js",
     "service-worker.js": "/Countries_landing/service-worker.js",
-    "static/css/main.c3f232ca.chunk.css.map": "/Countries_landing/static/css/main.c3f232ca.chunk.css.map",
-    "static/js/2.33bb0505.chunk.js.LICENSE": "/Countries_landing/static/js/2.33bb0505.chunk.js.LICENSE",
+    "static/css/main.aef181d4.chunk.css.map": "/Countries_landing/static/css/main.aef181d4.chunk.css.map",
+    "static/js/2.7fe9e345.chunk.js.LICENSE": "/Countries_landing/static/js/2.7fe9e345.chunk.js.LICENSE",
     "static/media/arrow-left.svg": "/Countries_landing/static/media/arrow-left.713fe29d.svg",
     "static/media/dark-mode-moon.svg": "/Countries_landing/static/media/dark-mode-moon.399b1420.svg",
     "static/media/down-btn.svg": "/Countries_landing/static/media/down-btn.2c0862a6.svg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.64b23685.js",
-    "static/js/2.33bb0505.chunk.js",
-    "static/css/main.c3f232ca.chunk.css",
-    "static/js/main.c0b264d3.chunk.js"
+    "static/js/2.7fe9e345.chunk.js",
+    "static/css/main.aef181d4.chunk.css",
+    "static/js/main.c999e78d.chunk.js"
   ]
 }
