@@ -31,6 +31,11 @@
     "paginate paginate"
     ;
 
+    &__errorText {
+      grid-area: form;
+      margin-top: 4.5rem;
+    }
+
     &__cardSection {
       grid-area: cards;
       grid-template-columns: 1fr 1fr 1fr;
@@ -44,7 +49,7 @@
   .list {
     grid-area: list;
     margin-left: auto;
-    margin-bottom: 3.2rem;
+    margin-bottom: 5rem;
   }
 
   .card {

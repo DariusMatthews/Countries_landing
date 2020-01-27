@@ -8,6 +8,7 @@ import DownBtn from '../images/down-btn.svg';
 export default function Main({ toggle }) {
   //states to hold all user interactions, countries, and pagination
   const [userText, setUserText] = useState('');
+  const [errorText, setErrorText] = useState('');
   const [userSearch, setUserSearch] = useState('');
   const [userSelect, setUserSelect] = useState('');
   const [countries, setCountries] = useState([]);
@@ -59,7 +60,13 @@ export default function Main({ toggle }) {
   //submit handler
   const submitHandler = e => {
     e.preventDefault();
-    setUserSearch(userText);
+    if (userText.length === 0) {
+      setErrorText('Please enter country name');
+    } else {
+      setErrorText('');
+      setUserSearch(userText);
+    }
+    console.log(errorText);
   }
 
   //get current cards per page
@@ -96,6 +103,8 @@ export default function Main({ toggle }) {
           />
         </button>
       </form>
+
+      <p className="main__errorText">{errorText}</p>
 
       {/* User Region Filter Options */}
       <ul
